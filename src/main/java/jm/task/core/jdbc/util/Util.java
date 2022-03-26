@@ -13,7 +13,7 @@ public class Util {
 
     private static Connection connection = null;
 
-    public  static Connection getConnection (){
+    public static Connection getConnection() {
         try {
             Class.forName(dbDriver);
             connection = DriverManager.getConnection(dbURL, dbUsername, dbPassword);
@@ -21,5 +21,15 @@ public class Util {
             e.printStackTrace();
         }
         return connection;
+    }
+
+    public static void closeConnection() {
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
