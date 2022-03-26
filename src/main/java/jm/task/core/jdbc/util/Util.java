@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Util {
     private static final String dbURL = "jdbc:mysql://localhost:3306/pred_1";
     private static final String dbDriver = "com.mysql.cj.jdbc.Driver";
-    // String dbURL = "jdbc:mysql://localhost:3306; INIT = RUNSCRIPT FROM 'classpath::init.sql'";
+
     private static final String dbUsername = "root";
     private static final String dbPassword = "root";
 
